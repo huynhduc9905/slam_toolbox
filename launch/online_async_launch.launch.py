@@ -55,9 +55,9 @@ def generate_launch_description():
         name='slam_toolbox',
         output='screen',
         namespace='',
-        remappings=[
-            ('/map', '/map_navi'),  # Remap service
-    ]
+    #     remappings=[
+    #         ('/map', '/map_navi'),  # Remap service
+    # ]
     )
 
     start_map_to_img_node = LifecycleNode(
@@ -122,7 +122,7 @@ def generate_launch_description():
     ld = LaunchDescription()
 
     ld.add_action(declare_autostart_cmd)
-    ld.add_action(enable_odrive_tf)
+    #ld.add_action(enable_odrive_tf)
     ld.add_action(declare_use_lifecycle_manager)
     ld.add_action(declare_use_sim_time_argument)
     ld.add_action(declare_slam_params_file_cmd)
