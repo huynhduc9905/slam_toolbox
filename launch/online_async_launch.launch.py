@@ -63,7 +63,6 @@ def generate_launch_description():
     start_map_to_img_node = LifecycleNode(
         package='map_to_img',
         executable='map_to_img',
-        name='map_to_img',
         output='screen',
         namespace=''
     )
@@ -71,7 +70,6 @@ def generate_launch_description():
     start_pose_publisher_node = LifecycleNode(
         package='pose_publisher',
         executable='pose_publisher',
-        name='pose_publisher',
         output='screen',
         namespace=''
     )
@@ -79,7 +77,6 @@ def generate_launch_description():
     start_map_mask_node = LifecycleNode(
         package='map_mask',
         executable='map_mask',
-        name='map_mask',
         output='screen',
         namespace=''
     )
