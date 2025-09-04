@@ -65,21 +65,18 @@ def generate_launch_description():
         package='map_to_img',
         executable='map_to_img',
         output='screen',
-        namespace=''
     )
 
     start_pose_publisher_node = Node(
         package='pose_publisher',
         executable='pose_publisher',
         output='screen',
-        namespace=''
     )
 
     start_map_mask_node = Node(
         package='map_mask',
         executable='map_mask',
         output='screen',
-        namespace=''
     )
 
     start_map_saver = IncludeLaunchDescription(
