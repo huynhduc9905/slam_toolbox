@@ -15,6 +15,7 @@ from lifecycle_msgs.msg import Transition
 from launch.actions import ExecuteProcess
 from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch_ros.actions import Node
 
 def generate_launch_description():
     autostart = LaunchConfiguration('autostart')
@@ -60,21 +61,21 @@ def generate_launch_description():
     # ]
     )
 
-    start_map_to_img_node = LifecycleNode(
+    start_map_to_img_node = Node(
         package='map_to_img',
         executable='map_to_img',
         output='screen',
         namespace=''
     )
 
-    start_pose_publisher_node = LifecycleNode(
+    start_pose_publisher_node = Node(
         package='pose_publisher',
         executable='pose_publisher',
         output='screen',
         namespace=''
     )
 
-    start_map_mask_node = LifecycleNode(
+    start_map_mask_node = Node(
         package='map_mask',
         executable='map_mask',
         output='screen',
