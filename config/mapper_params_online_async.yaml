@@ -21,7 +21,7 @@ slam_toolbox:
     transform_publish_period: 0.02
     map_update_interval: 2.0  # Changed: 5.0→2.0 for more frequent updates in large areas
     resolution: 0.05
-    min_laser_range: 0.0
+    min_laser_range: 0.5
     max_laser_range: 20.0
     minimum_time_interval: 0.5
     transform_timeout: 0.2
